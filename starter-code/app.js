@@ -134,7 +134,7 @@ let objectLit = function() {
 console.log(objectLit());
 // TODO: Uncomment the following line of code to see the output in the browser console
 
-const objectLit1 = () => ({key1: 'value1', key2: 'value2', key3: 'value3' });
+const objectLit1 = () => ({key1: 'value1', key2: 'value2', key3: 'value3', });
 console.log(objectLit1());
 
 //----------------------------------------------------
@@ -149,8 +149,20 @@ let sumAndProduct = function(a, b) {
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
 
-const sumAndProduct1 = (a, b) => `${[a+b,a*b]}`;
+
+const sumAndProduct1 = (a, b) => {
+  let sum = a + b;
+  let product = a * b;
+  return [sum, product];
+};
+
 console.log(sumAndProduct1(3, 9));
+
+
+// Another solution
+
+// const sumAndProduct2 = (a, b) => `${[a+b,a*b]}`;
+// console.log(sumAndProduct2(3, 9));
 
 //--------------------------------------------------------------
 
@@ -182,7 +194,7 @@ console.log(joe);
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
 
-// const Student1 = (name, age, hometown) => `${name} , ${age} , ${hometown}`;
+// const Student1 = (name, age, hometown) => {
 //   this.name = name;
 //   this.age = age;
 //   this.hometown = hometown;
@@ -244,8 +256,14 @@ console.log(joe.scopeArrow());
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
 //
+// Contain joe information
+//
 // 2. What is "this" when joe.scopeArrow() is invoked?
 //
+// Contains Windows information
+//
 // 3. Explain why "this" is different when an arrow function is used.
+//
+// I don't know.
 //
 
